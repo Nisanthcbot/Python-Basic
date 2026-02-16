@@ -119,3 +119,46 @@ if x:
     print("True")
 else:
     print("False")
+
+_____________________________________________
+
+The program should:
+
+Store student name
+
+Store marks for 3 subjects
+
+Calculate total
+
+Calculate average
+
+Decide grade
+
+Display result clearly
+
+Ans
+
+Student_Name = "Nisanth"
+english = 75
+tamil = 56
+math = 87
+
+total = english+tamil+math
+average = total/3
+
+if average > 95:
+    grade ="A"
+
+elif average < 85:
+    grade ="B"
+
+elif average < 65:
+    grade ="C"
+
+else :
+    grade ="Try Next Time"
+
+
+print("Total mark:",total)
+print("Average Mark :",average)
+print("Grade: ",grade)_____________________________________
