@@ -1,0 +1,10 @@
+#comparison operator 
+
+"""
+==   
+!=
+<
+>
+
+"""
+

@@ -1,8 +1,10 @@
-sq = int(input("Enter the number :"))
-power = sq**2
-cub = sq**3
-rem = sq%5
+age=int(input("Enter The Age :"))
+studentORno =input("Are You an Student yes or No :")
+student = studentORno.upper()
+amount = 150
 
-print(f"Squre Root of {sq} is {power}")
-print(f"Cube Root of {sq} is {cub}")
-print(f"Remainder when divided by 5 : {rem}")
+
+if age >65 or student == 'YES' :
+    discount = amount * 10/100
+    amount -= discount
+    print(amount)
