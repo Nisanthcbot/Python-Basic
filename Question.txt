@@ -161,4 +161,259 @@ else :
 
 print("Total mark:",total)
 print("Average Mark :",average)
-print("Grade: ",grade)_____________________________________
+print("Grade: ",grade)
+
+_____________________________________
+
+'''
+SCENARIO 1 – Student Mark Sheet (Easy)
+Problem
+
+A student has scored marks in 5 subjects.
+Write a program to:
+
+Calculate Total Marks
+
+Calculate Average
+
+Check:
+
+Average ≥ 50 → Pass
+
+Average < 50 → Fail
+
+📌 Use:
+
+Arithmetic operators for calculation
+
+Comparison operators for result
+
+'''
+
+No_sub=int(input("Enter the Total Subject :"))
+Total_mark=int(input("Enter The Total Mark : "))
+average = Total_mark/No_sub
+print("Average Mark is :",average)
+
+if average >=50:
+    print("Pass")
+
+else:
+    print("Fail")
+
+_____________________________________________
+
+'''
+SCENARIO 2 – Shopping Bill (Easy)
+Problem
+
+A customer buys 3 products.
+
+Product	Price
+Product 1	₹450
+Product 2	₹320
+Product 3	₹230
+
+Tasks:
+
+Calculate Total Bill
+
+If total bill ≥ ₹1000 → Apply 10% discount
+
+Print final amount
+
+'''
+
+product1 = 450
+product2 = 320
+product3 = 230
+
+total = product1 + product2 + product3
+print("Total Amount Before Discount : ₹",total)
+if total >=1000 :
+    discount = total *10/100
+    total -= discount
+
+print("Total Amount : ₹",total)
+
+_____________________________________________
+
+'''
+SCENARIO 3 – Salary Calculator (Medium)
+Problem
+
+An employee has:
+
+Basic Salary
+
+Allowances:
+
+HRA = 20% of basic
+
+DA = 10% of basic
+
+Tasks:
+
+Calculate Gross Salary
+
+If Gross Salary ≥ ₹30,000 → Print High Salary
+
+Else → Print Normal Salary
+
+'''
+basic_salary = 30000
+
+hra = basic_salary *20/100
+da = basic_salary *10/100
+
+gross_salary =  basic_salary - hra - da
+
+print(gross_salary)
+
+if gross_salary > 300000 :
+    print("High Salary")
+else:
+    print("Normal Salary")
+
+
+_____________________________________________
+
+'''
+SCENARIO 5 – Electricity Bill System (Hard)
+Problem
+
+An electricity board charges as follows:
+
+Units Consumed	Rate
+≤ 100	₹1/unit
+101 – 200	₹2/unit
+> 200	₹3/unit
+
+Tasks:
+
+Calculate total bill
+
+If bill > ₹500 → Add 5% surcharge
+
+Print final bill amount
+
+'''
+
+Unit_consumed = int(input("Enter the Unit Consumed :"))
+
+if Unit_consumed <=100:
+    rate = 1*Unit_consumed
+
+elif Unit_consumed >100 and Unit_consumed <=200:
+    rate = 2*Unit_consumed
+
+else:
+    rate = 3*Unit_consumed
+
+print(f"{Unit_consumed} ₹{rate}")
+
+
+_____________________________________________
+
+
+'''
+SCENARIO 6 – Bank Account System (Hard)
+Problem
+
+A bank customer has:
+
+Opening balance
+
+Transactions:
+
+Deposit amount
+
+Withdrawal amount
+
+Rules:
+
+Calculate final balance
+
+If final balance < 1000 → Print Low Balance Warning
+
+Else → Print Balance OK
+
+'''
+opening_balance = 10000
+
+transaction = input("Select Transaction Deposit or Withdraw : ")
+if transaction.lower() == "deposit":
+    deposit_amount = int(input("Enter the deposit Amount : ₹"))
+    opening_balance += deposit_amount
+    print(opening_balance)
+
+elif transaction.lower() =="withdraw":
+    withdraw_amount =int(input("Enter the withdraw Amount : ₹"))
+    opening_balance -= withdraw_amount
+    if opening_balance <withdraw_amount:
+        print("insufficient  Amount")
+
+else:
+    print("try Again")
+
+
+
+_____________________________________________
+
+
+'''
+SCENARIO 7 – Company Bonus System (Very Hard)
+Problem
+
+An employee works in a company.
+
+Inputs:
+
+Monthly salary
+
+Years of experience
+
+Rules:
+
+If experience ≥ 5 years → Bonus = 20% salary
+
+Else if experience ≥ 3 years → Bonus = 10% salary
+
+Else → No bonus
+
+Tasks:
+
+Calculate bonus
+
+Calculate final salary
+
+Check if final salary ≥ ₹50,000 → Senior Employee
+
+'''
+
+
+
+monthly_Salary = int(input("Enter the Monthly Salary : ₹"))
+Yr_Ex = int(input("Enter the Year of Experience :"))
+
+if Yr_Ex >= 5:
+    bonus = monthly_Salary *20/100
+
+elif Yr_Ex >=3:
+    bonus = monthly_Salary*10/100
+    
+else:
+    print("No Bonus")
+
+final_Salary = bonus + monthly_Salary
+print("Bonus Amount For this Year ",bonus)
+print("Final Salry : ₹",final_Salary)
+
+if final_Salary >=50000:
+       print("Senior EmployeeS")
+
+
+
+
+
+

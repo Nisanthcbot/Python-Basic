@@ -1,10 +1,36 @@
-age=int(input("Enter The Age :"))
-studentORno =input("Are You an Student yes or No :")
-student = studentORno.upper()
-amount = 150
+'''
+Q1. User Subscription Access System
 
+A SaaS platform offers plans:
 
-if age >65 or student == 'YES' :
-    discount = amount * 10/100
-    amount -= discount
-    print(amount)
+Plan	Price	Access
+Free	₹0	Limited
+Basic	₹999	Standard
+Pro	₹1999	Full
+
+Rules:
+
+If user selects Pro and payment ≥ ₹1999 → Full access
+
+If payment < plan price → Access denied
+
+Tasks:
+
+Validate payment
+
+Assign access level
+
+Print subscription status
+
+'''
+
+Plan = input("Select the paln (Free / Basic / Pro)").lower()
+payment = int(input("Enter the Amount To paid :₹"))
+
+if Plan == "pro" and payment >=1999:
+    print("Successfull Now u will get all access")
+
+else:
+    print("Access denied")
+    
+
