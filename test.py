@@ -1,36 +1,49 @@
-'''
-Q1. User Subscription Access System
+"""
+E-Commerce Order Validation System
 
-A SaaS platform offers plans:
+User enters:
 
-Plan	Price	Access
-Free	₹0	Limited
-Basic	₹999	Standard
-Pro	₹1999	Full
+Product price
+
+Stock quantity
+
+User membership (normal / premium)
+
+Payment amount
 
 Rules:
 
-If user selects Pro and payment ≥ ₹1999 → Full access
+If stock is 0 → "Out of Stock"
 
-If payment < plan price → Access denied
+If payment < product price → "Payment Failed"
 
-Tasks:
+If membership is premium AND payment correct → Apply 10% cashback
 
-Validate payment
+If payment > product price → Show refund amount
 
-Assign access level
+Otherwise → "Order Placed Successfully"
 
-Print subscription status
+Only one final outcome should print.
 
-'''
+"""
 
-Plan = input("Select the paln (Free / Basic / Pro)").lower()
-payment = int(input("Enter the Amount To paid :₹"))
 
-if Plan == "pro" and payment >=1999:
-    print("Successfull Now u will get all access")
+product_price = int(input("Enter the product Amount :₹"))
+stock_quantity = 10 
+user_membership = input("Select You are (Normal / Premium) Membership :").lower()
+payment_amount=int(input("Enter the paument Amount : ₹"))
 
-else:
-    print("Access denied")
+cashback = product_price *10/100
+
+if stock_quantity >0:
+    if user_membership =="premium" and payment_amount == product_price :
+        print(f"{product_price} You Have get 10% off{cashback}")
     
+    elif payment_amount == product_price:
+        print(f"{product_price}")
+    
+    else:
+        print("payment Faild")
+
+
 

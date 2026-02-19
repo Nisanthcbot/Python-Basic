@@ -415,5 +415,52 @@ if final_Salary >=50000:
 
 
 
+_____________________________________________
+
+
+
+'''
+Question
+
+Create an ATM system.
+
+User inputs:
+
+Account balance
+
+Withdrawal amount
+
+Conditions:
+
+If withdrawal ≤ 0 → "Invalid Amount"
+
+If withdrawal > balance → "Insufficient Balance"
+
+If withdrawal > 25000 → "Daily Limit Exceeded"
+
+Otherwise → Deduct and show remaining balance
+
+'''
+
+balance = 50000
+
+withdrawal_amount = int(input("Enter the Withdraw Amount : ₹"))
+
+
+if withdrawal_amount <=0:
+    print("Invalid Amount")
+
+elif withdrawal_amount >balance:
+    print("Insufficient Balance")
+
+elif withdrawal_amount > 25000:
+    print("Daily Limit Exceede")
+
+else:
+    remaining_balance = balance - withdrawal_amount
+    print(f"Withdraw Amount is ₹{withdrawal_amount} and remaning balance {remaining_balance}")
+
+    
+
 
 
