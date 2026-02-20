@@ -29,21 +29,39 @@ Only one final outcome should print.
 
 
 product_price = int(input("Enter the product Amount :₹"))
-stock_quantity = 10 
+stock_quantity = int(input("Enter the Stock Quantity :"))
 user_membership = input("Select You are (Normal / Premium) Membership :").lower()
-payment_amount=int(input("Enter the paument Amount : ₹"))
+payment_amount=int(input("Enter the Payment Amount : ₹"))
 
 cashback = product_price *10/100
 
 if stock_quantity >0:
-    if user_membership =="premium" and payment_amount == product_price :
-        print(f"{product_price} You Have get 10% off{cashback}")
+    if payment_amount < product_price:
+        print("Payment Failed")
+        
+    elif payment_amount > product_price:
+        refund_amount = payment_amount - product_price
+        print("Refund Amount :₹",refund_amount)
     
-    elif payment_amount == product_price:
-        print(f"{product_price}")
+    elif product_price == payment_amount and user_membership =="premium":
+        print("You get 10% Cashback and the Amount is :₹",cashback)
+        print("Order Has been Plased Successfully")
+
+    elif product_price == payment_amount:
+         print("Order has been Successfully Placed")
+
+else:
+       print("Out of Stock")
     
-    else:
-        print("payment Faild")
+
+
+
+
+
+
+
+
+
 
 
 

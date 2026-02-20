@@ -464,3 +464,12 @@ else:
 
 
 
+
+if user_membership =="premium" and payment_amount == product_price :
+        print(f"{product_price} You Have get 10% off{cashback}")
+    
+    elif payment_amount == product_price:
+        print(f"{product_price}")
+    
+    else:
+        print("payment Faild")
