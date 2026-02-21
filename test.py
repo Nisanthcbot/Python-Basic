@@ -1,58 +1,58 @@
 """
-E-Commerce Order Validation System
-
 User enters:
 
-Product price
+Monthly revenue
 
-Stock quantity
+Active users
 
-User membership (normal / premium)
-
-Payment amount
+Subscription plan (basic / pro / enterprise)
 
 Rules:
 
-If stock is 0 → "Out of Stock"
+If plan enterprise:
 
-If payment < product price → "Payment Failed"
+If revenue > 10 lakh AND users > 1000 → Enterprise Elite
 
-If membership is premium AND payment correct → Apply 10% cashback
+Else → Enterprise Standard
 
-If payment > product price → Show refund amount
+If plan pro:
 
-Otherwise → "Order Placed Successfully"
+If revenue > 5 lakh → Pro Premium
 
-Only one final outcome should print.
+Else → Pro Standard
+
+If basic:
+
+If revenue > 1 lakh → Upgrade Suggested
+
+Else → Starter Tier
 
 """
 
 
-product_price = int(input("Enter the product Amount :₹"))
-stock_quantity = int(input("Enter the Stock Quantity :"))
-user_membership = input("Select You are (Normal / Premium) Membership :").lower()
-payment_amount=int(input("Enter the Payment Amount : ₹"))
+monthly_revenue = int(input("Enter the monthly recvenue :"))
+active_user = int(input("Enter the Active User :"))
+plan =input("Selct the plan (baisc/pro/enterprise):").lower()
 
-cashback = product_price *10/100
+if plan=="enterprise":
+    if monthly_revenue >1000000 and active_user >1000:
+        print("Enterprice Elite")
+    else:
+        print("Enterprice Standard")
 
-if stock_quantity >0:
-    if payment_amount < product_price:
-        print("Payment Failed")
-        
-    elif payment_amount > product_price:
-        refund_amount = payment_amount - product_price
-        print("Refund Amount :₹",refund_amount)
-    
-    elif product_price == payment_amount and user_membership =="premium":
-        print("You get 10% Cashback and the Amount is :₹",cashback)
-        print("Order Has been Plased Successfully")
+elif plan =="pro":
+    if monthly_revenue >500000 :
+        print('pro Premium')
+    else:
+        print("Pro Standard")
 
-    elif product_price == payment_amount:
-         print("Order has been Successfully Placed")
-
+elif plan =="baisc":
+    if monthly_revenue >100000 :
+        print("Upgrade Suggested")
+    else:
+        print("Started tier")
 else:
-       print("Out of Stock")
-    
+    print("Enter Currect Plan")
 
 
 
