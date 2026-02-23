@@ -79,3 +79,40 @@ number = 5
 
 for i in range(1,11):
     print(number*i)
+
+
+
+#while loop
+
+
+"""
+it will run till condition is currect 
+
+"""
+
+
+
+"""
+1️⃣ Print Reverse Numbers
+
+Print numbers from 10 to 1 using for loop.
+
+"""
+
+
+for i in range(10,0,-1):
+    print(i)
+
+
+
+
+"""
+Print all even numbers from 1 to 50.
+Also print how many even numbers are there.
+
+"""
+
+
+for i in range(1,50):
+    if i % 2== 0:
+        print(i)

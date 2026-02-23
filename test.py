@@ -1,31 +1,13 @@
 """
-Credit Card Fraud Detection (Logic Based)
+Take a number n from user.
+Find sum of numbers from 1 to n.
 
-User enters:
-
-Transaction amount
-
-Country (local / international)
-
-Previous fraud history (yes / no)
-
-Rules:
-
-If amount > 100000 → Flag High Risk
-
-If international AND amount > 50000 → Flag Suspicious
-
-If previous fraud history == yes:
-
-Any amount > 20000 → Auto Block
-
-Else → Transaction Approved
-
-Think carefully about priority.
+Example:
+n = 5
+Output → 15
 
 """
+n = int(input("Enter the number:"))
 
-
-
-
-
+for i in range(1,n):
+    print(i)
