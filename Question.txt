@@ -462,14 +462,151 @@ else:
 
     
 
+_____________________________________
 
 
+E-Commerce Order Validation System
 
-if user_membership =="premium" and payment_amount == product_price :
-        print(f"{product_price} You Have get 10% off{cashback}")
+User enters:
+
+Product price
+
+Stock quantity
+
+User membership (normal / premium)
+
+Payment amount
+
+Rules:
+
+If stock is 0 → "Out of Stock"
+
+If payment < product price → "Payment Failed"
+
+If membership is premium AND payment correct → Apply 10% cashback
+
+If payment > product price → Show refund amount
+
+Otherwise → "Order Placed Successfully"
+
+Only one final outcome should print.
+
+
+ANS:
+
+
+product_price = int(input("Enter the product Amount :₹"))
+stock_quantity = int(input("Enter the Stock Quantity :"))
+user_membership = input("Select You are (Normal / Premium) Membership :").lower()
+payment_amount=int(input("Enter the Payment Amount : ₹"))
+
+cashback = product_price *10/100
+
+if stock_quantity >0:
+    if payment_amount < product_price:
+        print("Payment Failed")
+        
+    elif payment_amount > product_price:
+        refund_amount = payment_amount - product_price
+        print("Refund Amount :₹",refund_amount)
     
-    elif payment_amount == product_price:
-        print(f"{product_price}")
+    elif product_price == payment_amount and user_membership =="premium":
+        print("You get 10% Cashback and the Amount is :₹",cashback)
+        print("Order Has been Placed Successfully")
+
+    elif product_price == payment_amount:
+         print("Order has been Successfully Placed")
+
+else:
+       print("Out of Stock")
+
+
+_____________________________________________
+
+
+"""
+Performance rating (1–5)
+
+Years in company
+
+Any warning letter (yes / no)
+
+Rules:
+
+If warning letter == yes → Not eligible
+
+If rating >= 4:
+
+If years >= 3 → Promoted
+
+Else → Not enough experience
+
+If rating < 4 → Performance improvement required
+
+"""
+
+warning_letter=input("Any Warning letter (Yes/No) :").lower()
+performance_rating =int(input("Enter the Rating out of '5' :")) 
+Years_of_experiences = int(input("Enter the years of experiences :"))
+
+
+if warning_letter == "no":
+    if performance_rating >=4 :
+        if Years_of_experiences >=3:
+            print("Promoted")
+        
+        else:
+            print("Not Enough Experiences")
     
+    else :
+        print("Performance improvement required ")
+
+else:
+    print("Not Eligible")
+
+
+_____________________________________________
+
+
+Server Access Security System
+
+User enters:
+
+Username
+
+Password
+
+OTP verified (yes / no)
+
+Account status (active / blocked)
+
+Rules:
+
+If account blocked → Access denied
+
+If username & password correct:
+
+If OTP verified → Access granted
+
+Else → OTP required
+
+Else → Invalid credentials
+
+Ans:
+
+username =input("Enter The User Name :")
+password = input("Enter the Password :")
+otp =input("Select u have received opt (Yes / No) :")
+account_status = input("Select the Account Status (Active / Blocked):").lower()
+
+if account_status == "blocked":
+    print("access Denied")
+
+else:
+    if password =="Nisanth@2003" and username =="Nisanth":
+        if otp =="yes":
+            print("Access Granted")
+        else:
+            print("Otp Required")
     else:
-        print("payment Faild")
+        print("invalid credentials")
