@@ -1,0 +1,336 @@
+"""
+Q1 (5 Marks)
+
+Take two numbers from user.
+Print:
+
+Addition
+
+Subtraction
+
+Multiplication
+
+Division
+
+Floor division
+
+Remainder
+
+"""
+
+
+num1 = int(input("Enter the 1st Number :"))
+num2 = int(input("Enter the 2nd Number :"))
+
+print("Addition of 2 number :", num1+num2)
+print("Subtraction of 2 number :", num1-num2)
+print("Multiplication of 2 number :", num1*num2)
+print("Division of 2 number :", num1/num2)
+print("Floor division of 2 number :", num1//num2)
+print("Remainder division of 2 number :", num1%num2)
+
+
+
+
+"""
+Q2 (5 Marks)
+
+Take a number from user.
+Print:
+
+Square
+
+Cube
+
+Whether it is even or odd
+
+"""
+
+
+num = int(input("Enter the 1st Number :"))
+
+square = num*num
+cube = num*num*num
+print(f"Square of {num} =",square)
+print(f"odd of {num} =",cube)
+
+if num %2==0:
+    print("Even Number")
+else:
+    print("Odd Number")
+
+
+
+
+"""
+What will be the output?
+
+a = 10
+b = 3
+print(a / b)
+print(a // b)
+print(a % b)
+print(a ** 2)
+
+"""
+
+
+
+3.3333333333333335
+3
+1
+100
+
+
+
+
+"""
+Q4 (5 Marks)
+
+Take total marks and number of subjects from user.
+Print:
+
+Average
+
+If average ≥ 50 → "Pass"
+
+Otherwise → "Fail"
+
+"""
+
+
+total_mark =int(input('Enter the Total Mark :'))
+subject = int(input('Enter the Total Subject :'))
+
+average  = total_mark/subject
+
+if average >=50:
+    print("Pass")
+
+else:
+    print("fail")
+
+
+
+
+
+
+
+____________________________________________________________________________________________
+
+Section - B
+______________________________________________________________________________________________
+
+
+"""
+SECTION B – Conditions (30 Marks)
+Q5 (7.5 Marks)
+
+Login System
+username = "admin"
+password = "1234"
+Print proper messages for:
+
+Both correct
+
+Wrong username
+
+Wrong password
+
+"""
+
+username=input('Enter the User name :')
+password =input("Enter the Password :")
+
+if username == "admin" and password=="1234":
+    print("Both Correct")
+
+elif username !="admin":
+    print("Wrong username")
+
+elif password !="1234":
+    print("Wrong password")
+
+
+
+
+"""
+Q6 (7.5 Marks)
+
+ATM Withdrawal
+If withdrawal <= 0 → Invalid
+If withdrawal > balance → Insufficient
+Else deduct and print remaining balance
+
+"""
+
+withdrawal = int(input('Enter the Withdrawal Amount :'))
+balance = 10000
+
+
+if withdrawal <0:
+    print("Invalid ")
+
+elif withdrawal > balance:
+    print("Insufficient")
+
+
+else:
+    remaining = balance - withdrawal
+    print(f"Withdrawal Amount is {withdrawal} and the remaining Amount is {remaining}")
+
+
+
+
+
+"""
+Q7 (7.5 Marks)
+
+Student Grade System
+90+ → A
+75–89 → B
+50–74 → C
+Below 50 → Fail
+
+"""
+grade = int(input("Enter the Grade :"))
+
+
+if grade >= 90:
+    print("A")
+
+elif grade >=75:
+    print("B")
+
+elif grade >=50:
+    print("C")
+
+else:
+    print("fail")
+
+
+
+
+"""
+Q8(7.5 Marks)
+
+Take age from user.
+If age < 18 → Minor
+18–59 → Adult
+60+ → Senior Citizen
+"""
+age = int(input("Enter the Grade :"))
+
+
+if age >= 60:
+    print("Senior Citizen")
+
+elif age >=18:
+    print("Adult")
+
+else:
+    print("Minor")
+
+____________________________________________________________________________________________
+
+section - C
+
+____________________________________________________________________________________________
+
+"""
+🔵 SECTION C – Loops (30 Marks)
+Q9 (6 Marks)
+
+Print numbers from 1 to 100.
+If divisible by 3 → Fizz
+If divisible by 5 → Buzz
+If divisible by both → FizzBuzz
+"""
+
+
+
+for i in range(1,100+1):
+    if i %3 == 0 and i %5 == 0  :
+        print(f"{i}FizzBuzz")
+    
+    elif  i %3 == 0:
+        print(f"{i}Fizz")
+    
+    elif i %5 == 0:
+        print(f"{i}Buzz")
+        
+
+"""
+🔵 SECTION C – Loops (30 Marks)
+Q10 (6 Marks)
+
+Take n.
+Print sum from 1 to n.
+"""
+
+
+n = int(input('enter the number :'))
+sum = 0
+
+
+for i in range(1,n+1):
+    sum +=i
+
+
+print("Sum of number :",sum)
+
+
+
+"""
+Q11 (6 Marks)
+
+Print multiplication table of given number.
+
+"""
+
+
+n = int(input('enter the number :'))
+sum = 0
+
+
+for i in range(1,11):
+    print(f"{i}X{n} =", i*n)
+
+
+"""
+Count even and odd numbers from 1 to n.
+
+"""
+
+
+n = int(input('enter the number :'))
+odd_count = 0
+even_count =0
+
+
+for i in range(1,n+1):
+    if i % 2==0:
+        even_count+=1
+    else:
+        odd_count+=1
+
+print("Total Odd Count ",odd_count)
+print("Even Count ",even_count)
+
+
+
+"""
+import math
+
+number = 5
+result = math.factorial(number)
+print(f"The factorial of {number} is {result}")
+
+"""
+
+
+import math
+
+number = 5
+result = math.factorial(number)
+print(f"The factorial of {number} is {result}")
