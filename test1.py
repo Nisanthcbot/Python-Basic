@@ -1,41 +1,57 @@
 """
-(10 Marks) – Prime Number Check
+Tasks for Today
+Problem 1
 
-Take a number from user.
+Print numbers 1 to 10
 
-Check whether it is a Prime number or Not.
+Expected output
 
-Rules:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+Problem 2
 
-Prime number is divisible only by 1 and itself.
+Print even numbers from 1 to 20
 
-If number <= 1 → Not Prime
+Expected
 
-Example:
-7 → Prime
-8 → Not Prime
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
 
+Hint
+
+if number % 2 == 0
+Problem 3
+
+Print odd numbers from 1 to 20
+
+Hint
+
+if number % 2 != 0
 """
 
-names = ["karthi", "nava", "akash", "partha"]
-amounts = [3000, 2100, 4000, 6000]
+for i in range(1,11):
+    print(i)
 
 
-
-average = sum(amounts)/len(amounts)
-
-
-print("Average Expencess :",average)
-
-
-for i in range(len(amounts)):
-    if amounts[i] == average:
-        print(names[i],"no need to give Money")
+for i in range(1,21):
+    if i %2==0:
+        print(i)
     
-    elif amounts[i]>average:
-        print(names[i],":U Spend Extra Amount:",amounts[i]-average)
-    
-
     else:
-         print(names[i]," :U Need to Pay:",average-amounts[i])
-
+        print(i)
