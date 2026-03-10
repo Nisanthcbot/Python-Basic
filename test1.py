@@ -62,18 +62,44 @@ def square_list(n):
 square_list(n)
 
 
-Q4 (5 Marks)
-
-What will be output?
-
-def test(x):
-    x = x + 5
-    return x
-
-num = 10
-print(test(num))
-print(num)
 
 
-15
-10
+
+"""
+🎉 1️⃣ Movie Night Snacks Split
+
+Friends bought snacks separately.
+
+Names = ["A", "B", "C", "D"]
+Amounts = [500, 700, 300, 500]
+
+Tasks:
+
+Find average
+
+Who paid extra?
+
+Who needs to pay?
+
+Print total amount to be settled
+
+"""
+
+Names = ["A", "B", "C", "D"]
+Amounts = [500, 700, 300, 500]
+
+
+average =sum(Amounts)/len(Amounts)
+
+print(average)
+
+
+for i in range(len(Amounts)):
+    if Amounts[i] > average:
+        print(Names[i],"You Paid Extra")
+    
+    elif Amounts[i]<average:
+        print(Names[i],"You paid Less Amount")
+    
+    else:
+        print(Names[i],"You no need to pay any Amount")

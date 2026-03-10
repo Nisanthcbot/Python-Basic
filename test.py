@@ -1,19 +1,30 @@
 """
-Q3 (5 Marks)
+Find Second Largest Number
 
-Write a function square_list(n)
-Print squares from 1 to n using loop inside function.
+numbers = [10,25,8,40,15]
 
+Output
+
+Second Largest : 25
+
+Rules
+
+No sort()
+No max()
+
+We’ll build the loop logic together.
 """
 
+numbers = [10,25,8,40,15]
 
-n= int(input("Enter the number :"))
+Second_list=[]
 
-
-def square_list(n):
-    for i in range(1,n+1):
-        square = i*i
-        print(square)
+num = numbers[0]
 
 
-square_list(n)
+for i in numbers:
+    if i > num:
+        num = i
+print(num)
+
+
